@@ -1,8 +1,9 @@
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100  overflow-hidden">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,20 +48,15 @@ const Header = () => {
         <a className="btn btn-ghost text-xl">SwiftRoute</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <a>Item2</a>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+      <ul className="menu menu-horizontal px-1">
+          <li><Link href="/services">Services</Link></li>
+          <li><Link href="/pricing">Pricing</Link></li>
+          <li><Link href="/about">About Us</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn btn-primary text-white">Sign In</a>
       </div>
     </div>
   );
