@@ -3,8 +3,8 @@ import {useState, useRef} from 'react'
 import Link from 'next/link'
 import LandingIntro from './LandingIntro'
 import ErrorText from  '../../components/Typography/ErrorText'
-import InputText from '../../components/Input/InputText'
 import CheckCircleIcon  from '@heroicons/react/24/solid/CheckCircleIcon'
+import InputText from '@/components/Input/InputText'
 
 function ForgotPassword(){
 
@@ -17,7 +17,7 @@ function ForgotPassword(){
     const [linkSent, setLinkSent] = useState(false)
     const [userObj, setUserObj] = useState(INITIAL_USER_OBJ)
 
-    const submitForm = (e) =>{
+    const submitForm = (e:React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault()
         setErrorMessage("")
 
@@ -30,7 +30,7 @@ function ForgotPassword(){
         }
     }
 
-    const updateFormValue = ({updateType, value}) => {
+    const updateFormValue = ({updateType, value}:{updateType:string, value:string}) => {
         setErrorMessage("")
         setUserObj({...userObj, [updateType] : value})
     }

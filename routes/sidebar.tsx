@@ -114,28 +114,6 @@ const routes = [
       },
     ],
   },
-  {
-    path: "",
-    icon: applyIconClass(DocumentTextIcon),
-    name: "Documentation",
-    submenu: [
-      {
-        path: "/app/getting-started",
-        icon: applyIconClass(DocumentTextIcon, true),
-        name: "Getting Started",
-      },
-      {
-        path: "/app/features",
-        icon: applyIconClass(TableCellsIcon, true),
-        name: "Features",
-      },
-      {
-        path: "/app/components",
-        icon: applyIconClass(CodeBracketSquareIcon, true),
-        name: "Components",
-      },
-    ],
-  },
 ];
 
 export default routes;

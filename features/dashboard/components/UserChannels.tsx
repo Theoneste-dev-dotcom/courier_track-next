@@ -12,14 +12,14 @@ function UserChannels(){
     return(
         <TitleCard title={"User Signup Source"}>
              {/** Table Data */}
-             <div className="overflow-x-auto">
+             <div className="overflow-x-auto bg-base-100">
                 <table className="table w-full">
                     <thead>
                     <tr>
                         <th></th>
-                        <th className="normal-case">Source</th>
-                        <th className="normal-case">No of Users</th>
-                        <th className="normal-case">Conversion</th>
+                        <th className="text-base-content normal-case">Source</th>
+                        <th className="text-base-content normal-case">No of Users</th>
+                        <th className="text-base-content normal-case">Conversion</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -27,10 +27,10 @@ function UserChannels(){
                             userSourceData.map((u, k) => {
                                 return(
                                     <tr key={k}>
-                                        <th>{k+1}</th>
-                                        <td>{u.source}</td>
-                                        <td>{u.count}</td>
-                                        <td>{`${u.conversionPercent}%`}</td>
+                                        <th className="text-base-content">{k+1}</th>
+                                        <td className="text-base-content">{u.source}</td>
+                                        <td className="text-base-content">{u.count}</td>
+                                        <td className="text-base-content">{`${u.conversionPercent}%`}</td>
                                     </tr>
                                 )
                             })

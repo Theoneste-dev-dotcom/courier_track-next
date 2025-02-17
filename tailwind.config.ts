@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import daisyui from 'daisyui'
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,15 +6,17 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./containers/**/*.{js,ts,jsx,tsx,mdx}",
     "./features/**/*.{js,ts,jsx,tsx,mdx}",
+   "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js"
   
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
     },
   },
-  plugins: [daisyui],
+  darkMode: ["class", '[data-theme="dark"]'],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
 } satisfies Config;
+

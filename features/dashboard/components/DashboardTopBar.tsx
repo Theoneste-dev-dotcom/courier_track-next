@@ -9,14 +9,7 @@ import Datepicker from "react-tailwindcss-datepicker";
 
 
 
-const periodOptions = [
-    {name : "Today", value : "TODAY"},
-    {name : "Yesterday", value : "YESTERDAY"},
-    {name : "This Week", value : "THIS_WEEK"},
-    {name : "Last Week", value : "LAST_WEEK"},
-    {name : "This Month", value : "THIS_MONTH"},
-    {name : "Last Month", value : "LAST_MONTH"},
-]
+
 
 function DashboardTopBar({updateDashboardPeriod}){
 
@@ -31,6 +24,7 @@ function DashboardTopBar({updateDashboardPeriod}){
             updateDashboardPeriod(newValue)
         } 
 
+        
 
     return(
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -39,7 +33,7 @@ function DashboardTopBar({updateDashboardPeriod}){
                 containerClassName="w-72 " 
                 value={dateValue} 
                 theme={"light"}
-                inputClassName="input input-bordered w-72" 
+                inputClassName="input input-bordered w-72 text-base-content" 
                 popoverDirection={"down"}
                 toggleClassName="invisible"
                 onChange={handleDatePickerValueChange} 
@@ -57,8 +51,8 @@ function DashboardTopBar({updateDashboardPeriod}){
             /> */}
             </div>
             <div className="text-right ">
-                <button className="btn btn-ghost btn-sm normal-case"><ArrowPathIcon className="w-4 mr-2"/>Refresh Data</button>
-                <button className="btn btn-ghost btn-sm normal-case  ml-2"><ShareIcon className="w-4 mr-2"/>Share</button>
+                <button className="btn btn-ghost btn-sm normal-case text-base-content"><ArrowPathIcon className="w-4 mr-2"/>Refresh Data</button>
+                <button className="btn btn-ghost btn-sm normal-case  ml-2 text-base-content"><ShareIcon className="w-4 mr-2"/>Share</button>
 
                 <div className="dropdown dropdown-bottom dropdown-end  ml-2">
                     <label tabIndex={0} className="btn btn-ghost btn-sm normal-case btn-square "><EllipsisVerticalIcon className="w-5"/></label>

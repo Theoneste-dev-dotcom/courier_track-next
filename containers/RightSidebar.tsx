@@ -1,3 +1,4 @@
+import React from 'react'
 import XMarkIcon  from '@heroicons/react/24/solid/XMarkIcon'
 import { useDispatch, useSelector } from 'react-redux'
 import NotificationBodyRightDrawer from '../features/common/components/NotificationBodyRightDrawer'
@@ -11,7 +12,7 @@ function RightSidebar(){
     const {isOpen, bodyType, extraObject, header} = useSelector(state => state.rightDrawer)
     const dispatch = useDispatch()
 
-    const close = (e) => {
+    const close = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       dispatch(closeRightDrawer(e))
     }
 
@@ -26,7 +27,7 @@ function RightSidebar(){
                         
                         {/* Header */}
                         <div className="navbar   flex pl-4 pr-4   shadow-md ">
-                            <button className="float-left btn btn-circle btn-outline btn-sm" onClick={() => close()}>
+                            <button type='button' title='close sidebar' className="float-left btn btn-circle btn-outline btn-sm" onClick={e => close(e)}>
                             <XMarkIcon className="h-5 w-5"/>
                             </button>
                             <span className="ml-2 font-bold text-xl">{header}</span>

@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="navbar bg-base-100  overflow-hidden xl:px-40 py-4 fixed top-0 z-10">
+    <div className="navbar bg-base-100 shadow-md fixed top-0 z-10 w-full xl:px-40 py-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,42 +24,46 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-base-300"
           >
-            <li>
+            <li className="text-base-content">
               <Link href="/services">Services</Link>
             </li>
-            <li>
+            <li className="text-base-content">
               <Link href="/pricing">Pricing</Link>
             </li>
-            <li>
+            <li className="text-base-content">
               <Link href="/about">About Us</Link>
             </li>
-            <li>
+            <li className="text-base-content">
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">SwiftRoute</a>
+        <Link href="/" className="btn btn-ghost text-xl text-base-content">
+          SwiftRoute
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          <li className="text-base-content">
             <Link href="/services">Services</Link>
           </li>
-          <li>
+          <li className="text-base-content">
             <Link href="/pricing">Pricing</Link>
           </li>
-          <li>
+          <li className="text-base-content">
             <Link href="/about">About Us</Link>
           </li>
-          <li>
+          <li className="text-base-content">
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary text-white">Sign In</a>
+        <Link href="/login" className="btn btn-primary text-white">
+          Sign In
+        </Link>
       </div>
     </div>
   );

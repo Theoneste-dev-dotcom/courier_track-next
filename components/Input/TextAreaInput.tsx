@@ -8,15 +8,15 @@ interface PropType {
         containerStyle: string;
         defaultValue: string;
         placeholder: string;
-      updateFormValue: string;
+      updateFormValue:  (value: any) => void
         updateType: string;
     
 }
-function TextAreaInput({labelTitle, labelStyle, type, containerStyle, defaultValue, placeholder, updateFormValue, updateType}){
+function TextAreaInput({labelTitle, labelStyle, type, containerStyle, defaultValue, placeholder, updateFormValue, updateType}:PropType){
 
     const [value, setValue] = useState(defaultValue)
 
-    const updateInputValue = (val) => {
+    const updateInputValue = (val:string) => {
         setValue(val)
         updateFormValue({updateType, value : val})
     }

@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-function SidebarSubmenu({submenu, name, icon}){
+function SidebarSubmenu({submenu, name, icon}:{submenu: any, name: string, icon: any}) {
     const pathname = usePathname()
     const [isExpanded, setIsExpanded] = useState(false)
 

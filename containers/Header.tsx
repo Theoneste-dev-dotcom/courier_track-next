@@ -4,7 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { themeChange } from "theme-change";
 import { openRightDrawer } from "../features/common/rightDrawerSlice";
 import { RIGHT_DRAWER_TYPES } from "@/utils/globalConstantUtil";
-import { BellIcon, Bars3Icon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { BellIcon, Bars3Icon } from "@heroicons/react/24/outline";
+import MoonIcon from '@heroicons/react/24/outline/MoonIcon'
+import SunIcon from '@heroicons/react/24/outline/SunIcon'
+
 import Image from "next/image";
 import Link from "next/link";
 import profile from "@/public/profile.png";
@@ -44,25 +47,25 @@ const Header = () => {
         <label htmlFor="left-sidebar-drawer" className="btn btn-primary drawer-button lg:hidden">
           <Bars3Icon className="h-5 w-5" />
         </label>
-        <h1 className="text-2xl font-semibold ml-3 text-primary">{pageTitle}</h1>
+        <h1 className="text-2xl font-semibold ml-3 text-base-content">{pageTitle}</h1>
       </div>
 
       {/* Right Section - Theme Toggle, Notifications, Profile */}
       <div className="flex items-center gap-x-4">
-        {/* Theme Toggle */}
-        <button className="btn btn-ghost btn-circle" onClick={toggleTheme}>
-          {currentTheme === "dark" ? (
-            <SunIcon className="h-6 w-6 text-yellow-500" />
-          ) : (
-            <MoonIcon className="h-6 w-6 text-gray-600" />
-          )}
-        </button>
+        {/* swap theme */}
+      <label className="swap ">
+        
+                <input type="checkbox"/>
+                <SunIcon  data-set-theme="light" data-act-class="ACTIVECLASS" className={"fill-current w-6 h-6 text-base-content "+(currentTheme === "dark" ? "swap-on" : "swap-off")}/>
+                <MoonIcon data-set-theme="dark" data-act-class="ACTIVECLASS" className={"fill-current w-6 h-6 text-base-content "+(currentTheme === "light" ? "swap-on" : "swap-off")} />
+            </label>
+
 
         {/* Notification Icon */}
         <button className="btn btn-ghost btn-circle relative" onClick={openNotification}>
-          <BellIcon className="h-6 w-6" />
+          <BellIcon className="h-6 w-6 text-base-content" />
           {noOfNotifications > 0 && (
-            <span className="absolute top-0 right-0 badge badge-secondary text-xs">
+            <span className="absolute top-0 right-0 badge badge-secondary text-xs text-base-content">
               {noOfNotifications}
             </span>
           )}

@@ -1,6 +1,6 @@
  function Subtitle({styleClass, children}:{styleClass: string, children: React.ReactNode}){
     return(
-        <div className={`text-xl font-semibold ${styleClass}`}>{children}</div>
+        <div className={`text-xl text-base-content font-semibold ${styleClass}`}>{children}</div>
     )
 }
 

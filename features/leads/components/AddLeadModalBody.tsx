@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import InputText from '../../../components/Input/InputText'
 import ErrorText from '../../../components/Typography/ErrorText'
 import { showNotification } from "../../common/headerSlice"
 import { addNewLead } from "../leadSlice"
+import InputText from "@/components/Input/InputText"
 
 const INITIAL_LEAD_OBJ = {
     first_name : "",
@@ -11,7 +11,7 @@ const INITIAL_LEAD_OBJ = {
     email : ""
 }
 
-function AddLeadModalBody({closeModal}){
+function AddLeadModalBody({closeModal}:any){
     const dispatch = useDispatch()
     const [loading, setLoading] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
@@ -35,7 +35,7 @@ function AddLeadModalBody({closeModal}){
         }
     }
 
-    const updateFormValue = ({updateType, value}) => {
+    const updateFormValue = ({updateType, value}:{updateType:string, value:string}) => {
         setErrorMessage("")
         setLeadObj({...leadObj, [updateType] : value})
     }
