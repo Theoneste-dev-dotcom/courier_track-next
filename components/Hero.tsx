@@ -2,12 +2,12 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="hero bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen">
+    <div className="hero bg-gradient-to-r from-gray-500 to-gray-600  min-h-screen xl:px-40 z-1">
       <div className="hero-content flex-col lg:flex-row-reverse text-center lg:text-left">
         <img
-          src="/images/courier-hero.webp" // Replace with your image
+          src="/assets/images/courier.png" // Replace with your image
           alt="Courier Management"
-          className="max-w-md rounded-lg shadow-2xl"
+          className="max-w-md rounded-xl shadow-2xl"
         />
         <div className="max-w-2xl">
           <h1 className="text-5xl font-bold text-white">
@@ -17,8 +17,8 @@ const Hero = () => {
             Effortlessly track shipments, manage drivers, and streamline operations with our real-time courier management platform. Whether you're a client, driver, or administrator, we've got you covered.
           </p>
           <div className="flex gap-4 justify-center lg:justify-start">
-            <button className="btn btn-primary">Get Started</button>
-            <button className="btn btn-outline btn-secondary">Learn More</button>
+            <button className="btn btn-primary hover:text-white hover:bg-gray-600">Get Started1</button>
+            <button className="btn btn-outline border-gray-200 border-2 text-white hover:bg-primary hover:border-none hover:text-gray-900">Learn More</button>
           </div>
         </div>
       </div>

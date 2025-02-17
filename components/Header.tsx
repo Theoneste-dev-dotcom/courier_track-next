@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="navbar bg-base-100  overflow-hidden">
+    <div className="navbar bg-base-100  overflow-hidden xl:px-40 py-4 fixed top-0 z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,32 +27,35 @@ const Header = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Item 1</a>
+              <Link href="/services">Services</Link>
             </li>
             <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <Link href="/pricing">Pricing</Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">SwiftRoute</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-      <ul className="menu menu-horizontal px-1">
-          <li><Link href="/services">Services</Link></li>
-          <li><Link href="/pricing">Pricing</Link></li>
-          <li><Link href="/about">About Us</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <Link href="/services">Services</Link>
+          </li>
+          <li>
+            <Link href="/pricing">Pricing</Link>
+          </li>
+          <li>
+            <Link href="/about">About Us</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">

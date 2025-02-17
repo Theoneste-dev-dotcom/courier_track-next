@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="footer bg-base-200 text-base-content p-10  overflow-hidden">
+    <footer className="footer bg-base-200 text-base-content p-10  overflow-hidden xl:px-40">
     <aside>
       <svg
         width="50"
